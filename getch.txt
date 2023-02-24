@@ -1,0 +1,10 @@
+while ((ch=getch())!=EOF && ch!='\n' && ch!='\r') {
+    if (ch==8 && i>0) {
+        printf("\b \b");
+        fflush(stdout);
+        i--;
+    } else if((isalnum(ch) || ch==' ' || ch=='*') && i<sizeof(inputString)-1) {
+        printf("%c",ch);
+        inputString[i++]=(char)ch;
+    }
+}
